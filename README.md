@@ -7,58 +7,75 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About lara9interia
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+It is a Laravel 9 Vue3 Inertia JS based demo project showing the basics of inertia js. Authentication, Authorization, Routing, form submittion and data binding. It will help begineers to understand "how to start with inertia JS". Build with love and passon and also its open source for web artisans.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Laravel 9
+2. Vue 3
+3. Inertia JS
+4. Tailwind CSS 3
+5. laravel/breeze
+6. Authentication
+7. Authorization
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Getting Started Step by Step
+1. In your root folder, clone the project file using git clone https://github.com/rafi021/lara9inertia.git
+2. Open terminal (bash/cmd). Then go to project folder using command
 
-## Learning Laravel
+```sh
+cd lara9inertia
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Then install required files and libraries using 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```sh
+composer install
+```
 
-## Laravel Sponsors
+4. Then create a .env file and generate key for this project using command 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```sh
+cp .env.example .env
 
-### Premium Partners
+php artisan key:generate
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+5. Then compile all CSS & JS files together using this command
 
-## Contributing
+```sh
+npm install && npm run dev
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+or
 
-## Code of Conduct
+```sh
+yarn install && yarn run dev
+```
+6. Create a database in MYSQL and connect it with your project via updating .env file.
+7. After connecting the db with project, then run command 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```sh
+php artisan migrate:fresh --seed
+```
 
-## Security Vulnerabilities
+After completing the migration and seeding of db, you will have 2 user ready for login in this project. 
+A.  Admin -> Admin
+    Email -> admin@example.come
+    Pass -> 1234
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+B.  User -> User
+    Email -> user@example.come
+    Pass -> 1234
 
-## License
+Finally we are ready to run our project using this command 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```sh
+php artisan serve 
+```
+in one terminal and also run
+
+```sh
+npm run watch 
+```
+ on another terminal for compiling js and css. 

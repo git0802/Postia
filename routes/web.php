@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'dashboard')->name('dashboard');
 
 
-Route::resource('posts', PostController::class);
-Route::inertia('about', 'About')->name('pages.about');
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('posts', PostController::class);
+    Route::inertia('pages/about', 'About')->name('pages.about');
+});
+
 Route::inertia('login', 'Auth/Login')->name('login');
+Route::post('login', [LoginController::class, 'store'])->name('login.post');
+Route::post('logout', [LoginController::class, 'destroy'])->name('logout');

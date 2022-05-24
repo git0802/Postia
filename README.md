@@ -61,11 +61,11 @@ php artisan migrate:fresh --seed
 
 After completing the migration and seeding of db, you will have 2 user ready for login in this project. 
 A.  Admin -> Admin
-    Email -> admin@example.come
+    Email -> admin@example.com
     Pass -> 1234
 
 B.  User -> User
-    Email -> user@example.come
+    Email -> user@example.com
     Pass -> 1234
 
 Finally we are ready to run our project using this command 

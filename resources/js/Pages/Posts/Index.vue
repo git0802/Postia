@@ -1,4 +1,5 @@
 <template>
+    <Head title="Posts List" />
     <AppLayout>
          <table class="mt-4 min-w-full divide-y divide-gray-200 border">
                 <thead>
@@ -40,9 +41,11 @@
 <script>
 
 import AppLayout from '../../Layouts/App'
+import { Head } from '@inertiajs/inertia-vue3'
 export default {
     components: {
         AppLayout,
+        Head
     },
     props: {
         posts: Object

@@ -6,6 +6,7 @@ import { InertiaProgress } from '@inertiajs/progress';
 
 createInertiaApp({
   resolve: name => require(`./Pages/${name}`),
+  title: title => `${title} - Inertia JS`,
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)

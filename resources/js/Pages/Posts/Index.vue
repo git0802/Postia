@@ -1,11 +1,6 @@
 <template>
-    <div class="overflow-hidden overflow-x-auto p-6 bg-white border-gray-200">
-        <div class="min-w-full align-middle">
-
-            <Link :href="route('posts.index')"> Posts</Link>
-            <Link :href="route('pages.about')" class="ml-2"> About</Link>
-
-            <table class="mt-4 min-w-full divide-y divide-gray-200 border">
+    <AppLayout>
+         <table class="mt-4 min-w-full divide-y divide-gray-200 border">
                 <thead>
                 <tr>
                     <th class="px-6 py-3 bg-gray-50 text-left">
@@ -38,32 +33,16 @@
                     </td>
                 </tr>
                 </tbody>
-            </table>
-        </div>
-    </div>
+        </table>
+    </AppLayout>
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3'
-import { InertiaProgress } from '@inertiajs/progress'
 
-InertiaProgress.init({
-     // The delay after which the progress bar will
-  // appear during navigation, in milliseconds.
-  delay: 250,
-
-  // The color of the progress bar.
-  color: '#29d',
-
-  // Whether to include the default NProgress styles.
-  includeCSS: true,
-
-  // Whether the NProgress spinner will be shown.
-  showSpinner: true,
-})
+import AppLayout from '../../Layouts/App'
 export default {
     components: {
-        Link
+        AppLayout,
     },
     props: {
         posts: Object

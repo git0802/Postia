@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'dashboard')->name('dashboard');
 
 
-Route::get('posts', [PostController::class, 'index'])->name('posts.index');
+Route::resource('posts', PostController::class);
 Route::inertia('about', 'About')->name('pages.about');
+Route::inertia('login', 'Auth/Login')->name('login');
